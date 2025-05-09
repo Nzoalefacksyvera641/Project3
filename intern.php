@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternshipSpace Dashboard</title>
+    <link rel="stylesheet" href="./intern.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Give Yourself an Unbeatable Advantage</h1>
+        <p>The only platform that guarantees real-world work experience across the globe.</p>
+        <a class="btn" href="./Form.html">Enroll Now</a>
+    </header>
+
+    <section class="sec1">
+        <div class="section-content">
+            <h2>The Reality of Starting Your Career</h2>
+            <p>The need for work experience is essential, but getting a job can be tough. You need experience, but to
+                gain experience, you need a job.</p>
+        </div>
+        <img src="./person.jpg" alt="Person contemplating career choices" class="section-image">
+    </section>
+
+    <section>
+        <h2>The Brain? InternshipSpace</h2>
+        <p>Find global work experience in any field or region with InternshipSpace app, the No. 1 platform for
+            internships.</p>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Coaching & Support</h3>
+                <p>As part of our program, you’ll receive coaching and support from seasoned experts in the field.
+                    Their expertise and guidance will help you navigate challenges and direct you towards career
+                    success.</p>
+            </div>
+            <div class="feature">
+                <h3>Award-Winning Courses</h3>
+                <p>Complement your internship with access to courses designed to set you apart and make you shine.</p>
+            </div>
+            <div class="feature">
+                <h3>Save Time</h3>
+                <p>Tell us what remote internship you want, and we match you based on your preferences and performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Launch Your Career</h2>
+        <img src="career-image.jpg" alt="Career Launch Representation" class="image">
+        <div class="stats">
+            <div class="stat">
+                <h3>150k+</h3>
+                <p>Global Internships Available Now and Growing</p>
+            </div>
+            <div class="stat">
+                <h3>80+</h3>
+                <p>Countries with Internships Available Worldwide</p>
+            </div>
+            <div class="stat">
+                <h3>1 in 3</h3>
+                <p>Interns Offered Further Opportunities Immediately Upon Completion</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2>Start Your Career Journey with InternshipSpace!</h2>
+        <a class="btn" href="./Form.html">Enroll Now</a>
+    </footer>
+
+</body>
+
+</html>

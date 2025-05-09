@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+/* About Us Page */
+.about-section {
+    text-align: center;
+    padding: 50px;
+    background: #f8f9fa;
+}
+
+.about-section h2, .about-section h3 {
+    color: #d9534f;
+}
+
+/* Contact Us Page */
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background: #f1f1f1;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.footer-column {
+    width: 30%;
+    text-decoration: none;
+}
+.footer-column h3 {
+color: red;
+}
+.pictur{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.column{
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+}
+.column img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 4, 0, 2);
+    transition: transform 0.3s ease;
+}
+.column img:hover{
+    transform: scale(1.05)
+}
+@media (max-width:900px) {
+    .column{
+        flex: 1 1 calc(50% - 20%);
+    }
+    
+}
+@media (max-width:600px) {
+    .column{
+        flex: 1 1 100%;
+    }
+    
+}

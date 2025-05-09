@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | BBMS</title>
+    <link rel="stylesheet" href="./Style2.css">
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Blood Bank Admin</h2>
+            <nav>
+                <ul style="list-style: none; margin-top:30px;">
+                    <li style="margin-bottom:15px;"><a href="#" style="color: white; text-decoration:none;">Dashboard</a></li>
+                    <li style="margin-bottom:15px;"><a href="#" style="color: white; text-decoration:none;">Donors</a></li>
+                    <li style="margin-bottom:15px;"><a href="#" style="color: white; text-decoration:none;">Requests</a></li>
+                    <li style="margin-bottom:15px;"><a href="#" style="color: white; text-decoration:none;">Reports</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <h1>Dashboard Overview</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Blood Units</h3>
+                    <div class="stat-value" id="total-blood">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Donors</h3>
+                    <div class="stat-value" id="total-donors">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Requests</h3>
+                    <div class="stat-value" id="pending-requests">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Fullfilled Requests</h3>
+                    <div class="stat-value" id="fullfilled-requests">0</div>
+                </div>
+            </div>
+            <button class="refresh-button" onclick="loadData()">Refrsh Data</button>
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Blood Type</th>
+                        <th>Available Units</th>
+                        <th>Last Update</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body"></tbody>
+            </table>
+            <div class="recent-section">
+                <div><h3>Recent Donors</h3>
+                <ul class="recent-list" id="recent-donors"></ul>
+                </div>
+                <div>
+                    <h3>Pending Requests</h3>
+                    <ul clas="recent-list" id="pending-request-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            function loadData() {
+                fetch('admin_dashboard.php')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('total-blood').textContent = data.total_blood;
+                    document.getElementById('total-donors').textContent = data.total_donors;
+                    document.getElementById('pending-requests').textContent = data.pending_requests;
+                    document.getElementById('fullfilled-requests').textContent = data.fulfilled_requests;
+                })
+                .catch(error => console.error('Error loading data:', error));
+            }
+            
+            window.onload = loadData;
+            </script>
+
+</body>
+</html>
