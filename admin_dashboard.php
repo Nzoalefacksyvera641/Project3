@@ -1,11 +1,11 @@
-<?php
+<?php 
 session_start();
 if (!isset($_SESSION['admin'])) {
     header("Location: admin_login.php");
     exit();
 }
 
-// Database connectiongit
+// Database connection
 $conn = new mysqli("localhost", "root", "", "blood_bank");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -30,35 +30,48 @@ $totals = $conn->query($totalBloodQuery)->fetch_assoc();
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial;
-            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
             margin: 0;
             padding: 0;
         }
         .dashboard-container {
-            padding: 20px;
+            padding: 30px;
         }
-        .card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        .card h2 {
-            margin-top: 0;
+        h1 {
+            color: #b30000;
+            text-align: center;
         }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            margin-bottom: 30px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        .card {
+            background: #fff;
+            border-left: 5px solid #b30000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .card h2 {
+            color: #b30000;
+            margin: 0 0 10px 0;
+        }
+        .dropdown-card {
+            margin-top: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #b30000;
+            border-radius: 5px;
+            background-color: #fff0f0;
         }
         footer {
-            background-color: #222;
+            background-color: #b30000;
             color: #fff;
             padding: 30px;
             display: flex;
@@ -77,8 +90,11 @@ $totals = $conn->query($totalBloodQuery)->fetch_assoc();
         }
         .footer-column a {
             display: block;
-            color: #ccc;
+            color: #f8f8f8;
             text-decoration: none;
+        }
+        .footer-column a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -105,13 +121,14 @@ $totals = $conn->query($totalBloodQuery)->fetch_assoc();
         </div>
     </div>
 
-    <div class="card">
+    <div class="card dropdown-card">
         <h2>Blood Group Breakdown</h2>
-        <ul>
+        <select>
+            <option disabled selected>Select Blood Group</option>
             <?php while ($row = $bloodGroups->fetch_assoc()): ?>
-                <li><?= $row['blood_group'] ?>: <?= $row['total'] ?> donations</li>
+                <option><?= $row['blood_group'] ?>: <?= $row['total'] ?> donations</option>
             <?php endwhile; ?>
-        </ul>
+        </select>
     </div>
 </div>
 

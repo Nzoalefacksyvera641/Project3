@@ -1,35 +1,29 @@
 <?php
+include 'db_connect.php';  
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $blood_group = mysqli_real_escape_string($conn, $_POST['blood_group']);
+    $donation_date = mysqli_real_escape_string($conn, $_POST['donation_date']);
+    $location = mysqli_real_escape_string($conn, $_POST['location']);
 
-    $servername = "localhost";
-    $username = "root";
-    $password ="";
-    $dbname= "blood_bank";
-    
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    
-    if ($conn->connect_error){
-        die("Connection failed:" . $conn->connect_error);
-    }else{
-         
-    }
-    
-    
-$full_name=$_POST['full_name'];
-$email=$_POST['email'];
-$blood_group=$_POST['blood_group'];
-$date=$_POST['date'];
-$location=$_POST['location'];
-
-
-    $sql = "INSERT INTO donations (id, full_name, email, blood_group, date, location) 
-            VALUES ('NULL', '$full_name', '$email', '$blood_group', '$date', '$location')";
+    $sql = "INSERT INTO donations (full_name, email, blood_group, date, location) 
+            VALUES ('$full_name', '$email', '$blood_group', '$donation_date', '$location')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Donatation recorded Successful! ";
+        echo "<script>
+                alert('Donation successful!');
+                window.location.href = 'index.html';
+              </script>";
+        exit();
     } else {
-        echo "Error: " . mysqli_error($conn);
-    } 
+        echo "Error saving donation: " . mysqli_error($conn);
+    }
+} else {
+    
+    header("Location: Donate.php");
+    exit();
 }
 ?>
+
