@@ -62,8 +62,8 @@
             </div>
             <div class="footer-column">
                 <h3>Contact Us</h3><br>
-                <p>Email: syveranzoalefack@gmail.com</p><br>
-                <p>Phone: +237 670 777 320</p><br>
+                <p>Email: bloodbank@gmail.com</p><br>
+                <p>Phone: +237 677 777 320</p><br>
                 <p>Location: Buea, Cameroon</p><br>
             </div>
         </div>

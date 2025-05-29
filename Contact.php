@@ -24,8 +24,8 @@
     <p>Get in touch with us for any inqueries or assistance.</p>
 
     <div class="contact-info">
-        <p><strong>Email:</strong> syveranzoalefack@gmail.com</p>
-        <p><strong>Phone:</strong> +237 670 777 320</p>
+        <p><strong>Email:</strong> bloodbank@gmail.com</p>
+        <p><strong>Phone:</strong> +237 677 777 320</p>
         <p><strong>Location:</strong> Buea, Cameroon</p>
     </div>
     <h2>Send a Message</h2>
@@ -59,8 +59,8 @@
         </div>
         <div class="column">
             <h3>Contact Us</h3>
-            <p>Email:syveranzoalefack@gmail.com</p>
-            <p>Phone: +237 670 777 320</p>
+            <p>Email:bloodbank@gmail.com</p>
+            <p>Phone: +237 677 777 320</p>
             <p>Location: Buea, Cameroon</p>
         </div>
     </div>

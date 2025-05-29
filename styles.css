@@ -15,8 +15,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: red;
+    padding: 20px 35px;
+    background-color: #c0392b;
     color: white;
 }
 
@@ -26,23 +26,112 @@ header {
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 50px;
+    margin-left: 40px;
 }
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 50px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline;  
+    
+}
+nav li:hover{
+    background:darkred;
+}
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    background-image: url("bloodbg.jpg") ;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:#f0f0f0;
+    padding-top:10px;
+    gap:10px;
+    justify-content:space-around;
+    
+}
+.hero1{
+    padding-top:200px;
+    padding-left:150px;
+    font-size:30px;
+    width:50%;
+    color:black;
+    margin:20px;
+}
+h2, .h2 {
+    font-size:50px;
+}
+.hero{
+    padding-right:50px;
+
+}
+.sec1{
+    border-radius:none;
+    box-shadow:none;
+    padding: 0px 0px;
+    margin:0;
+}
+section {
+padding: 30px 20px;
+margin: 20px;
+border-radius: 15px;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+text-align: center;
+}
+.features {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+margin-top: 10px;
+padding: 20px 0;
 }
 
+.feature {
+background: #e7f1ff;
+padding: 15px;
+flex-basis: 28%;
+flex: 1;
+margin: 10px;
+width:100%;
+border-radius: 10px;
+gap:30px;
+font-size: 0.9rem;
+text-align: center;
+height:auto;
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+min-width: 250px;
+}
+span{
+color:red;
+font-size:70px;
+}
+
+.feature:hover{
+    transform: scale(1.05)
+}
+@media (max-width:900px) {
+    .feature{
+        flex: 1 1 calc(50% - 20%);
+    }
+    
+}
+@media (max-width:600px) {
+    .feature{
+        flex: 1 1 100%;
+    }
+    
+}
 nav ul li a {
     text-decoration: none;
     color: white;
     padding: 8px 12px;
+    font-size: 25px;
 }
 nav a {
     flex: 1;
@@ -56,10 +145,6 @@ img{
     width: 100%;
     height: auto;
 }
-
-
-
-
 .login-btn {
     background: white;
     color: red;
@@ -67,12 +152,12 @@ img{
     border-radius: 5px;
 }
 .hero {
-    background: lightblue;
+    background: white;
     padding: 50px 20px;
 }
 
 .hero h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 footer {
